@@ -7,6 +7,7 @@ const FeedBack = require('./FeedBack')
 const FAQ = require('./FAQ')
 const calculator1 = require('./calculator1')
 const calculator2 = require('./calculator2')
+const IncomeCalculator = require('./IncomeCalculator')
 const db = {};
 
 let sequelize;
@@ -24,6 +25,8 @@ db.calculator1 = calculator1
 calculator1.init(sequelize)
 db.calculator2 = calculator2
 calculator2.init(sequelize)
+db.IncomeCalculator = IncomeCalculator
+IncomeCalculator.init(sequelize)
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
